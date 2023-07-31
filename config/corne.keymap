@@ -41,6 +41,20 @@
                                        &kp BSPC      &to 0           &kp TAB          &kp SPACE   &to 1           &kp RET
                         >;
                 };
+                number_layer {
+//      --------------------------------------------------------------------------------------------------------------------------------------------------
+//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  -             |
+//      |  A           |  S          |  D          |  F            |  G    |        |  .              |  4        |  5        |  6        |  +             |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
+//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
+
+                        bindings = <
+&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS           &kp A
+&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp KP_DOT        &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS            &kp A
+&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_SLASH           &kp A
+                                       &kp BSPC      &to 0           &kp TAB          &kp SPACE         &to 2       &kp RET
+                        >;
+                };
                 game_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------
 // |  TAB     |  Q     |  W      |  E          |  R            |        |  Y      |  U            |  I          |  O          |  P             |
