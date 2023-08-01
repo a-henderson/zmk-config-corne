@@ -51,44 +51,51 @@
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  - / _         |
-//      |  A           |  S          |  D          |  F            |  G    |        |  .              |  4        |  5        |  6        |  +             |
-//      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
+//      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  - / _                |
+//      |  A           |  S          |  D          |  F            |  G    |        |  .              |  4        |  5        |  6        |  +                    |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /                    |
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
 
                         bindings = <
-&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp N7      &kp N8      &kp N9      &td UNDERSCORE MINUS   &kp A
-&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp KP_DOT        &kp N4      &kp N5      &kp N6      &kp KP_PLUS            &kp A
-&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N0            &kp N1      &kp N2      &kp N3      &kp KP_SLASH           &kp A
-                                       &kp BSPC      &to 0           &kp TAB          &kp SPACE         &to 2       &kp RET
+&trans    &trans         &trans        &trans        &trans          &trans            &kp STAR          &kp N7      &kp N8      &kp N9      &td UNDERSCORE MINUS   &trans
+&trans    &trans         &trans        &trans        &trans          &trans            &kp DOT           &kp N4      &kp N5      &kp N6      &kp PLUS               &trans
+&trans    &trans         &trans        &trans        &trans          &trans            &kp N0            &kp N1      &kp N2      &kp N3      &kp SLASH              &trans
+                                       &trans        &trans          &trans            &trans            &to 2       &trans
                         >;
                 };
-                someLayer {
+                movement_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  page up       |
+//      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  HOME           |  7        |  8        |  END      |  page up       |
 //      |  A           |  S          |  D          |  F            |  G    |        |  left           |  down     |  up       |  right    |  page down     |
 //      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
 
                         bindings = <
-&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp PAGE_UP           &kp A
-&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp LEFT          &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN            &kp A
-&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_SLASH           &kp A
-                                       &kp BSPC      &to 0           &kp TAB          &kp SPACE         &to 2       &kp RET
+&trans    &trans         &trans        &trans        &trans          &trans           &kp HOME          &kp KP_N7   &kp KP_N8   &kp END     &kp PAGE_UP               &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp LEFT          &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN             &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_SLASH              &trans
+                                       &trans        &trans          &trans           &trans            &to 3       &trans
                         >;
                 };
                 game_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-// |  TAB     |  Q     |  W      |  E          |  R            |        |  Y      |  U            |  I          |  O          |  P             |
-// |  LSHIFT  |  A     |  S      |  D          |  F            |        |  H      |  J            |  K          |  L          |  ;             |
-// |  LCTRL   |  Z     |  X      |  C          |  V            |        |  N      |  M            |  ,          |  .          |  /             |
-//                     |  G      |  LAYER 0    |  SPC          |        |  ENT    |  LAYER 2      |  BKSP       |
+//      --------------------------------------------------------------------------------------------------------------------------------------------------
+//      |  TAB          |  Q    |  W      |  E          |  R               |        |          |        |        |
+//      |  LSHIFT       |  A    |  S      |  D          |  F               |        |          |        |        |
+//      |  LCTRL        |  Z    |  X      |  C          |  V               |        |          |        |        |
+//                              |  BKSP   |  LAYER 0    |  SPC             |        |          |        |        |
 
                         bindings = <
-&kp A &kp TAB         &kp Q    &kp W     &kp E         &kp R                    &trans    &trans          &trans        &trans        &trans  &kp A
-&kp A &kp LSHIFT      &kp A    &kp S     &kp D         &kp F                    &trans    &trans          &trans        &trans        &trans  &kp A
-&kp A &kp LCTRL       &kp Z    &kp X     &kp C         &kp V                    &trans    &trans          &trans        &trans        &trans  &kp A
-                         &kp G     &trans        &kp SPACE                &kp RET   &trans          &kp BSPC
+&trans    &kp TAB         &kp Q    &kp W     &kp E         &kp R                        &trans   &trans   &trans   &trans   &trans   &trans
+&trans    &kp LSHIFT      &kp A    &kp S     &kp D         &kp F                        &trans   &trans   &trans   &trans   &trans   &trans
+&trans    &kp LCTRL       &kp Z    &kp X     &kp C         &kp V                        &trans   &trans   &trans   &trans   &trans   &trans
+                                   &trans    &trans        &kp SPACE                    &trans   &to 4   &trans
+                        >;
+                };
+                bluetooth_layer{
+                        bindings = <
+&trans    &trans         &trans        &trans        &trans          &trans            &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans
+&trans    &trans         &trans        &trans        &trans          &trans            &bt BT_CLR        &trans         &trans         &trans         &trans           &trans
+                                       &trans        &trans          &trans            &trans            &to 4          &trans
                         >;
                 };
 
