@@ -21,6 +21,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
 
@@ -29,28 +38,42 @@
 
                 default_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q           |  W          |  E          |  R            |  T    |        |  Y        |  U            |  I          |  O          |  P             |
-//      |  A           |  S          |  D          |  F            |  G    |        |  H        |  J            |  K          |  L          |  ;             |
-//      |  Z           |  X          |  C          |  V            |  B    |        |  N        |  M            |  ,          |  .          |  /             |
-//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC      |  LAYER +1     |  ENT        |
+//      |  Q / ESC     |  W          |  E          |  R            |  T    |        |  Y        |  U            |  I             |  O          |  P             |
+//      |  A           |  S          |  D          |  F            |  G    |        |  H        |  J            |  K             |  L          |  ;             |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  N        |  M            |  , / '         |  .          |  /             |
+//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC      |  LAYER +1     |  ENT           |
 
                         bindings = <
-&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp Y       &kp U           &kp I         &kp O         &kp P                  &kp A
-&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp H       &bhm LSHIFT J   &bhm LALT K   &bhm LGUI L   &bhm LCTRL SEMI        &kp A
-&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N       &kp M           &kp COMMA     &kp DOT       &kp FSLH               &kp A
+&kp A     &td Q ESC      &kp W         &kp E         &kp R           &kp T            &kp Y       &kp U           &kp I            &kp O         &kp P                  &kp A
+&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp H       &bhm LSHIFT J   &bhm LALT K      &bhm LGUI L   &bhm LCTRL SEMI        &kp A
+&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N       &kp M           &td COMMA APOS   &kp DOT       &kp FSLH               &kp A
                                        &kp BSPC      &to 0           &kp TAB          &kp SPACE   &to 1           &kp RET
                         >;
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  -             |
+//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  _ / -         |
 //      |  A           |  S          |  D          |  F            |  G    |        |  .              |  4        |  5        |  6        |  +             |
 //      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
 
                         bindings = <
-&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS           &kp A
-&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp KP_DOT        &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS            &kp A
+&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp N7      &kp N8      &kp N9      &td UNDERSCORE MINUS   &kp A
+&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp KP_DOT        &kp N4      &kp N5      &kp N6      &kp KP_PLUS            &kp A
+&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N0            &kp N1      &kp N2      &kp N3      &kp KP_SLASH           &kp A
+                                       &kp BSPC      &to 0           &kp TAB          &kp SPACE         &to 2       &kp RET
+                        >;
+                };
+                someLayer {
+//      --------------------------------------------------------------------------------------------------------------------------------------------------
+//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  page up       |
+//      |  A           |  S          |  D          |  F            |  G    |        |  left           |  down     |  up       |  right    |  page down     |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
+//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
+
+                        bindings = <
+&kp A     &kp Q          &kp W         &kp E         &kp R           &kp T            &kp KP_MULTIPLY   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp PAGE_UP           &kp A
+&kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp LEFT          &kp DOWN    &kp UP      &kp RIGHT   &kp PAGE_DOWN            &kp A
 &kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_SLASH           &kp A
                                        &kp BSPC      &to 0           &kp TAB          &kp SPACE         &to 2       &kp RET
                         >;
