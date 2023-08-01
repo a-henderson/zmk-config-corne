@@ -35,7 +35,6 @@
 
         keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
 //      |  Q / ESC     |  W          |  E          |  R            |  T    |        |  Y        |  U            |  I             |  O          |  P             |
@@ -44,15 +43,15 @@
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC      |  LAYER +1     |  ENT           |
 
                         bindings = <
-&kp A     &td Q ESC      &kp W         &kp E         &kp R           &kp T            &kp Y       &kp U           &kp I            &kp O         &kp P                  &kp A
+&kp A     &td ESC Q      &kp W         &kp E         &kp R           &kp T            &kp Y       &kp U           &kp I            &kp O         &kp P                  &kp A
 &kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp H       &bhm LSHIFT J   &bhm LALT K      &bhm LGUI L   &bhm LCTRL SEMI        &kp A
-&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N       &kp M           &td COMMA APOS   &kp DOT       &kp FSLH               &kp A
+&kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N       &kp M           &td APOS COMMA   &kp DOT       &kp FSLH               &kp A
                                        &kp BSPC      &to 0           &kp TAB          &kp SPACE   &to 1           &kp RET
                         >;
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  _ / -         |
+//      |  Q           |  W          |  E          |  R            |  T    |        |  *              |  7        |  8        |  9        |  - / _         |
 //      |  A           |  S          |  D          |  F            |  G    |        |  .              |  4        |  5        |  6        |  +             |
 //      |  Z           |  X          |  C          |  V            |  B    |        |  0              |  1        |  2        |  3        |  /             |
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC            |  LAYER +1 |  ENT      |
