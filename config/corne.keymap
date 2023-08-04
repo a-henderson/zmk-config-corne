@@ -56,35 +56,35 @@
 &kp A     &td ESC Q      &kp W         &kp E         &kp R           &kp T            &kp Y       &kp U           &kp I            &kp O         &kp P                  &kp A
 &kp A     &bhm LCTRL A   &bhm LGUI S   &bhm LALT D   &bhm LSHIFT F   &kp G            &kp H       &bhm LSHIFT J   &bhm LALT K      &bhm LGUI L   &bhm LCTRL SEMI        &kp A
 &kp A     &kp Z          &kp X         &kp C         &kp V           &kp B            &kp N       &kp M           &td APOS COMMA   &kp DOT       &kp FSLH               &kp A
-                                       &kp BSPC      &meh 1 0        &kp TAB          &kp SPACE   &to 2           &kp RET
+                                       &kp BSPC      &meh 1 0        &kp TAB          &kp SPACE   &meh 2 3        &kp RET
                         >;
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q / ESQ     |  W          |  E     |  R       |  T     |        |  *       |  7&       |  8*    |  9(    |  - / _                |
-//      |  A           |  S          |  D     |  F       |  G     |        |  .>      |  4$       |  5%    |  6^    |  + / =                |
-//      |  Z           |  X          |  C     |  V       |  B     |        |  0)      |  1!       |  2"    |  3£    |  /? / \|              |
-//                                   |  BKSP  |  LAYER 0 |  TAB   |        |  SPC     |  LAYER +1 |  ENT   |
+//      |  Q / ESQ     |  "          |  (       |  )       |  T      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
+//      |  A           |  S          |  D       |  F       |  G      |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
+//      |  Z           |  X          |  C       |  V       |  B      |        |  #~             |  1!       |  2"    |  3£    |  /? / \|              |
+//                                   |  BKSP    |  LAYER 0 |  TAB    |        |  0)             |  LAYER +1 |  ENT   |
 
                         bindings = <
-&trans    &trans         &trans        &trans   &trans     &trans            &kp STAR   &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
-&trans    &trans         &trans        &trans   &trans     &trans            &kp DOT    &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
-&trans    &trans         &trans        &trans   &trans     &trans            &kp N0     &kp N1      &kp N2   &kp N3   &td BACKSLASH SLASH      &trans
-                                       &trans   &trans     &trans            &trans     &to 2       &trans
+&trans    &trans         &kp DQT       &kp LPAR   &kp RPAR   &trans             &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
+&trans    &trans         &trans        &trans     &trans     &trans             &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
+&trans    &trans         &trans        &trans     &trans     &trans             &kp NON_US_HASH   &kp N1      &kp N2   &kp N3   &td BACKSLASH SLASH      &trans
+                                       &trans     &trans     &trans             &kp N0            &to 2       &trans
                         >;
                 };
                 movement_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
 //      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  INSERT      |  HOME      |  [{       |  ]}             |  page up           |
 //      |  A           |  S          |  D          |  F            |  G    |        |  left        |  down      |  up       |  right          |  page down         |
-//      |  Z           |  X          |  C          |  V            |  B    |        |  DELETE      |  END       |  `        |  #~             |  Menu Key          |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  DELETE      |  END       |  `        |                 |  Menu Key          |
 //                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC         |  LAYER +1  |  ENT      |
 
                                bindings = <
 &trans    &trans         &trans        &trans        &trans          &trans           &kp INSERT   &kp HOME       &kp LBKT    &kp RBKT          &kp PAGE_UP               &trans
 &trans    &trans         &trans        &trans        &trans          &trans           &kp LEFT     &kp DOWN       &kp UP      &kp RIGHT         &kp PAGE_DOWN             &trans
-&trans    &trans         &trans        &trans        &trans          &trans           &kp DELETE   &kp END        &kp GRAVE   &kp NON_US_HASH   &kp K_CONTEXT_MENU        &trans
-                                       &trans        &trans          &trans           &trans       &to 3          &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp DELETE   &kp END        &kp GRAVE   &none             &kp K_CONTEXT_MENU        &trans
+                                       &trans        &trans          &trans           &kp SPACE    &to 3          &trans
                         >;
                 };
                 game_layer {
