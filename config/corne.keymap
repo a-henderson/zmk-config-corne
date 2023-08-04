@@ -12,6 +12,18 @@
 
 
 / {
+    macros {
+        quote_macro: quote_macro {
+            label = "ZM_quote_macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp NUMBER_2>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
     behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -61,16 +73,16 @@
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q / ESQ     |  "          |  (       |  )       |  T      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
-//      |  A           |  S          |  D       |  F       |  G      |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
-//      |  Z           |  X          |  C       |  V       |  B      |        |  #~             |  1!       |  2"    |  3£    |  /? / \|              |
-//                                   |  BKSP    |  LAYER 0 |  TAB    |        |  0)             |  LAYER +1 |  ENT   |
+//      |  Q / ESQ     |  "           |  (       |  )       |  T      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
+//      |  A           |  S           |  D       |  F       |  G      |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
+//      |  Z           |  X           |  C       |  V       |  B      |        |  #~             |  1!       |  2"    |  3£    |  /? / \|              |
+//                                    |  BKSP    |  LAYER 0 |  TAB    |        |  0)             |  LAYER +1 |  ENT   |
 
                         bindings = <
-&trans    &trans         &kp DQT       &kp LPAR   &kp RPAR   &trans             &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
-&trans    &trans         &trans        &trans     &trans     &trans             &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
-&trans    &trans         &trans        &trans     &trans     &trans             &kp NON_US_HASH   &kp N1      &kp N2   &kp N3   &td BACKSLASH SLASH      &trans
-                                       &trans     &trans     &trans             &kp N0            &to 2       &trans
+&trans    &trans         &quote_macro   &kp LPAR   &kp RPAR   &trans             &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
+&trans    &trans         &trans         &trans     &trans     &trans             &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
+&trans    &trans         &trans         &trans     &trans     &trans             &kp NON_US_HASH   &kp N1      &kp N2   &kp N3   &td BACKSLASH SLASH      &trans
+                                        &trans     &trans     &trans             &kp N0            &to 2       &trans
                         >;
                 };
                 movement_layer {
