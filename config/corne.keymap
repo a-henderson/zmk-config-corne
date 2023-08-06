@@ -103,13 +103,13 @@
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
 //      |  TAB          |  Q    |  W      |  E          |  R               |        |          |         |            |         |       |
 //      |  LSHIFT       |  A    |  S      |  D          |  F               |        |          |         |            |         |       |
-//      |  LCTRL        |  Z    |  X      |  C          |  V               |        |          |         |            |         |       |
+//      |  LCTRL        |  Z    |  X      |  C          |  B               |        |          |         |            |         |       |
 //                              |  BKSP   |  LAYER 0    |  SPC             |        |          |         |            |         |       |
 
                         bindings = <
 &trans    &kp TAB         &kp Q    &kp W     &kp E         &kp R                        &none    &kp N7      &kp N8      &kp N9   &none    &trans
 &trans    &kp LSHIFT      &kp A    &kp S     &kp D         &kp F                        &none    &kp N4      &kp N5      &kp N6   &none    &trans
-&trans    &kp LCTRL       &kp Z    &kp X     &kp C         &kp V                        &kp N0   &kp N1      &kp N2      &kp N3   &none    &trans
+&trans    &kp LCTRL       &kp Z    &kp X     &kp C         &kp B                        &kp N0   &kp N1      &kp N2      &kp N3   &none    &trans
                                    &kp LALT  &kp G         &kp SPACE                    &to 0    &to 4       &trans
                         >;
                 };
