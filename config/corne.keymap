@@ -78,14 +78,14 @@
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q / ESQ     |  "           |  (       |  )         |  F layer      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
-//      |  A           |  S           |  D       |  F         |  G            |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
+//      |  CAPSLOCK    |  "           |  (       |  )         |  F layer      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
+//      |  A           |  S           |  D       |  F         |  GRAVE        |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
 //      |  Z           |  X           |  C       |  V         |  B            |        |  #~             |  1!       |  2"    |  3£    |  /? / \|              |
 //                                    |  BKSP    |  Num Layer |  TAB          |        |  SPC            |  0)       |  ENT   |
 
                         bindings = <
-&trans    &trans         &quote_macro   &kp LPAR   &kp RPAR    &mo FUNCTIONS            &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
-&trans    &trans         &trans         &trans     &trans      &trans                   &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
+&trans    &kp CAPSLOCK   &quote_macro   &kp LPAR   &kp RPAR    &mo FUNCTIONS            &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS     &trans
+&trans    &trans         &trans         &trans     &trans      &kp GRAVE                &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS           &trans
 &trans    &trans         &trans         &trans     &trans      &trans                   &kp NON_US_HASH   &kp N1      &kp N2   &kp N3   &td BACKSLASH SLASH      &trans
                                         &trans     &trans      &trans                   &kp SPACE         &kp N0      &trans
                         >;
@@ -106,15 +106,15 @@
                 };
                 movement_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  INSERT      |  HOME      |  [{       |  ]}             |  page up           |
-//      |  A           |  S          |  D          |  F            |  G    |        |  left        |  down      |  up       |  right          |  page down         |
-//      |  Z           |  X          |  C          |  V            |  B    |        |  DELETE      |  END       |  `        |                 |  Menu Key          |
-//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC         |  LAYER +1  |  ENT      |
+//      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  INSERT      |  HOME      |  [             |  ]              |  page up           |
+//      |  A           |  S          |  D          |  F            |  G    |        |  left        |  down      |  up            |  right          |  page down         |
+//      |  Z           |  X          |  C          |  V            |  B    |        |  DELETE      |  END       |  {             |  }              |  Menu Key          |
+//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC         |  LAYER +1  |  ENT           |
 
                                bindings = <
-&trans    &trans         &trans        &trans        &trans          &trans           &kp INSERT   &kp HOME       &kp LBKT    &kp RBKT          &kp PAGE_UP               &trans
-&trans    &trans         &trans        &trans        &trans          &trans           &kp LEFT     &kp DOWN       &kp UP      &kp RIGHT         &kp PAGE_DOWN             &trans
-&trans    &trans         &trans        &trans        &trans          &trans           &kp DELETE   &kp END        &kp GRAVE   &none             &kp K_CONTEXT_MENU        &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp INSERT   &kp HOME       &kp LBKT         &kp RBKT          &kp PAGE_UP               &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp LEFT     &kp DOWN       &kp UP           &kp RIGHT         &kp PAGE_DOWN             &trans
+&trans    &trans         &trans        &trans        &trans          &trans           &kp DELETE   &kp END        &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp K_CONTEXT_MENU        &trans
                                        &trans        &trans          &trans           &kp SPACE    &trans         &trans
                         >;
                 };
