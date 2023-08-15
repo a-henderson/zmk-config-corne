@@ -78,14 +78,14 @@
                 };
                 number_layer {
 //      --------------------------------------------------------------------------------------------------------------------------------------------------
-//      |  CAPSLOCK    |  "           |  (       |  )         |  F layer      |        |  *              |  7&       |  8*    |  9(    |  - / _                |
-//      |  A           |  S           |  D       |  F         |  GRAVE        |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
+//      |  CAPSLOCK    |  "           |  (       |  )         |  GRAVE        |        |  *              |  7&       |  8*    |  9(    |  - / _                |
+//      |  A           |  S           |  D       |  F         |  F layer      |        |  .>             |  4$       |  5%    |  6^    |  + / =                |
 //      |  Z           |  X           |  C       |  V         |  B            |        |  #~             |  1!       |  2"    |  3£    |  /? / \|              |
 //                                    |  BKSP    |  Num Layer |  TAB          |        |  SPC            |  0)       |  ENT   |
 
                         bindings = <
-&trans    &kp CAPSLOCK   &quote_macro   &kp LPAR   &kp RPAR    &mo FUNCTIONS            &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS            &trans
-&trans    &trans         &trans         &trans     &trans      &kp GRAVE                &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS                  &trans
+&trans    &kp CAPSLOCK   &quote_macro   &kp LPAR   &kp RPAR    &kp GRAVE                &kp STAR          &kp N7      &kp N8   &kp N9   &td UNDERSCORE MINUS            &trans
+&trans    &trans         &trans         &trans     &trans      &mo FUNCTIONS            &kp DOT           &kp N4      &kp N5   &kp N6   &td EQUAL PLUS                  &trans
 &trans    &trans         &trans         &trans     &trans      &trans                   &kp NON_US_HASH   &kp N1      &kp N2   &kp N3   &td NON_US_BACKSLASH SLASH      &trans
                                         &trans     &trans      &trans                   &kp SPACE         &kp N0      &trans
                         >;
@@ -95,7 +95,7 @@
 //      |  Q / ESQ     |  W          |  E          |  R            |  T    |        |  F1       |  F2           |  F3    |  F4    |  F5
 //      |  A           |  S          |  D          |  F            |  G    |        |  F6       |  F7           |  F8    |  F9    |  F10
 //      |  Z           |  X          |  C          |  V            |  B    |        |  F11      |  F12          |  F13   |  F14   |  F15
-//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC      |  LAYER +1     |  ENT   |
+//                                   |  BKSP       |  LAYER 0      |  TAB  |        |  SPC      |  to bluetooth |  ENT   |
 
                                bindings = <
 &trans    &trans         &trans        &trans        &trans          &trans           &kp F1      &kp F2          &kp F3    &kp F4    &kp F5    &none
@@ -122,7 +122,8 @@
                         bindings = <
 &none    &none         &out OUT_USB  &out OUT_BLE  &out OUT_TOG        &none             &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none
 &none    &none         &none         &none         &none               &none             &bt BT_CLR       &none          &none          &none          &none            &none
-                                     &none         &to QWERTY          &none             &none            &to FPS        &none
+&none    &none         &none         &none         &none               &none             &none            &none          &none          &none          &none            &none
+                                     &none         &to QWERTY          &none             &kp DOWN         &to FPS        &kp UP
                         >;
                 };
                 game_layer {
